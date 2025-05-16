@@ -1,0 +1,153 @@
+/* Stile generale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #F4F4F9; /* Colore di sfondo chiaro */
+    color: #000; /* Testo nero */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Contenitore principale */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #ffffff; /* Sfondo bianco per il contenitore */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Titolo */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333; /* Colore scuro per il titolo */
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Etichette */
+label {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    color: #4A90E2; /* Colore blu per le etichette */
+}
+
+/* Input, Select e Textarea */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #A1C4E7; /* Colore blu chiaro per il bordo */
+    outline: none;
+    background: #f0f5ff; /* Sfondo azzurro chiaro per gli input */
+    color: #000; /* Testo nero */
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #A1C4E7; /* Colore chiaro per il placeholder */
+}
+
+input:focus, select:focus, textarea:focus {
+    background: #e6f0ff; /* Colore di sfondo chiaro quando si clicca */
+    box-shadow: 0px 0px 8px rgba(74, 144, 226, 0.5); /* Bordo evidenziato in blu */
+}
+
+/* Pulsante */
+button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #4A90E2; /* Colore blu per il pulsante */
+    color: #fff; /* Testo bianco sul pulsante */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #357ABD; /* Colore blu più scuro per hover */
+    box-shadow: 0px 4px 10px rgba(74, 144, 226, 0.5);
+}
+
+/* Sezione di risposta */
+h2 {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #4A90E2; /* Colore blu per il titolo della risposta */
+}
+
+pre {
+    background: #f9f9f9; /* Sfondo chiaro per la risposta */
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #A1C4E7; /* Bordo blu chiaro per la risposta */
+    color: #000; /* Testo nero per la risposta */
+}
+
+/* Spinner di caricamento */
+.spinner {
+    display: none;
+    margin: 20px auto;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #4A90E2; /* Colore blu per il caricamento */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+/* Effetto di animazione */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+    
+    button {
+        font-size: 14px;
+    }
+}

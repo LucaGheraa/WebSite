@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Client API</h1>
+
+        <form id="apiForm">
+            <label for="url">URL API:</label>
+            <input type="text" id="url" placeholder="Inserisci l'URL" required>
+
+            <label for="method">Metodo:</label>
+            <select id="method">
+                <option value="GET">GET</option>
+                <option value="POST">POST</option>
+                <option value="PUT">PUT</option>
+                <option value="DELETE">DELETE</option>
+            </select>
+
+            <label for="jsonData">Dati (JSON):</label>
+            <textarea id="jsonData" rows="4" placeholder='{"key": "value"}'></textarea>
+
+            <button type="submit">Invia Richiesta</button>
+        </form>
+
+        <div id="loadingSpinner" class="spinner"></div>
+
+        <div id="responseContainer" class="response">
+            <h2>Risposta API:</h2>
+            <pre id="responseText"></pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

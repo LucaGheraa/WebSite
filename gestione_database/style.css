@@ -1,0 +1,551 @@
+/* Reset base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo della pagina */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f1f1f1;
+    padding: 30px;
+}
+
+/* Contenitore principale */
+.container {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: auto;
+    padding: 40px 30px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* Titolo principale */
+.container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Pulsante per tornare al menu */
+.source-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #0f2027;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.source-button:hover {
+    background-color: #00c8b0;
+    transform: scale(1.05);
+}
+
+/* Menu link */
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap; /* prova a non andare a capo */
+    gap: 18px;
+    background: linear-gradient(to right, #203a43, #2c5364); /* sfumatura blu scura, simile al background */
+    padding: 22px 40px; /* un po' più largo */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+    margin: 20px auto;
+    max-width: 1200px; /* più largo per farci stare i pulsanti */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Singolo pulsante menu */
+.menu a {
+    color: #e0f7f9; /* azzurro chiaro, meno acceso */
+    text-decoration: none;
+    font-size: 1.05rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: rgba(32, 58, 67, 0.7); /* trasparenza leggermente scura */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(224, 247, 249, 0.25);
+}
+
+.menu a:hover {
+    background-color: rgba(32, 58, 67, 0.9);
+    transform: scale(1.03);
+    box-shadow: 0 0 8px rgba(224, 247, 249, 0.4);
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: 2px solid #444;
+    border-radius: 30px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    background-color: #222;
+    color: #eee;
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.search-bar input[type="text"]:focus {
+    border-color: #5a9;
+    box-shadow: 0 0 8px #5a9;
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #dddddd;
+    border-top: 1px solid #ffffff20;
+    padding-top: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Form: contenitore */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Form: input e file */
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container input[type="file"],
+.form-container input[type="url"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff10;
+    color: #f1f1f1;
+    font-size: 1rem;
+    border: 1px solid #ffffff20;
+    backdrop-filter: blur(5px);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Placeholder */
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+    color: #cccccc;
+}
+
+/* Focus */
+.form-container input:focus,
+.form-container textarea:focus {
+    outline: none;
+    border-color: #00ffe0;
+    transform: scale(1.05);
+}
+
+/* Form: bottone invio */
+.form-container button[type="submit"] {
+    padding: 12px 20px;
+    background-color: #00ffe0;
+    color: #0f2027;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-container button[type="submit"]:hover,
+.form-container button[type="submit"]:focus {
+    background-color: #00c8b0;
+    transform: scale(1.05);
+    outline: none;
+}
+
+/* Transizioni input e button */
+.form-container input,
+.form-container button[type="submit"],
+.form-container textarea {
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Form: textarea */
+.form-container textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff10;
+    color: #f1f1f1;
+    font-size: 1rem;
+    border: 1px solid #ffffff20;
+    backdrop-filter: blur(5px);
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Contenitore principale per la tabella */
+.table-container {
+    margin-top: 40px;
+    width: 100%;
+    overflow-x: auto;  /* Abilita lo scroll orizzontale per la tabella */
+    border-radius: 15px; /* Arrotonda i bordi del contenitore */
+}
+
+/* Tabella */
+.table-container table {
+    width: 100%;
+    min-width: 800px;  /* Imposta una larghezza minima per la tabella */
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Intestazioni della tabella */
+.table-container th,
+.table-container td {
+    padding: 18px 20px;
+    text-align: left;
+    font-size: 1.1rem;
+    border: 1px solid #444444;
+    color: #f1f1f1;
+}
+
+.table-container th {
+    background-color: #00ffcc;
+    color: #222222;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Righe alternate della tabella */
+.table-container tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Effetto hover sulle righe della tabella */
+.table-container tr:hover {
+    background-color: rgba(0, 255, 204, 0.3);
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* Personalizzazione della scrollbar della tabella */
+.table-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #00ffcc;
+    border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* --- Stile tabella musei identico a quello opere --- */
+.musei-table {
+    width: 90%;
+    margin: 0 auto 50px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0 8px 24px rgba(32, 60, 69, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #203c45;
+}
+
+.musei-table thead {
+    background-color: #203c45;
+    color: #ffffff;
+    text-align: left;
+}
+
+.musei-table thead th {
+    padding: 18px 25px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.musei-table tbody tr {
+    border-bottom: 1px solid #e0e7ff;
+    transition: background-color 0.3s ease;
+    cursor: default;
+}
+
+.musei-table tbody tr:hover {
+    background-color: #f0f5ff;
+}
+
+.musei-table tbody td {
+    padding: 15px 25px;
+    color: #334155;
+    vertical-align: middle;
+}
+
+/* Link pulsanti Modifica/Elimina con testo #203c45 */
+.musei-table tbody td a {
+    display: inline-block;
+    padding: 6px 14px;
+    margin-right: 12px;
+    background-color: transparent;
+    color: #203c45;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 2px solid #203c45;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    user-select: none;
+}
+
+.musei-table tbody td a:hover {
+    background-color: #203c45;
+    color: #ffffff;
+}
+
+/* Prima colonna più larga per ISIL */
+.musei-table tbody td:first-child {
+    font-weight: 600;
+    max-width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .musei-table thead th,
+    .musei-table tbody td {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .musei-table tbody td:first-child {
+        max-width: 140px;
+    }
+}
+
+
+.opere-table {
+    width: 90%;
+    margin: 0 auto 50px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0 8px 24px rgba(32, 60, 69, 0.2);
+    border-radius: 12px;
+    overflow: hidden; /* assicura che il bordo curvo funzioni bene */
+    background: #ffffff;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #203c45; /* aggiunto bordo per evitare pixel bianchi */
+}
+
+.opere-table thead {
+    background-color: #203c45;  /* colore richiesto */
+    color: #ffffff;
+    text-align: left;
+}
+
+.opere-table thead th {
+    padding: 18px 25px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.opere-table tbody tr {
+    border-bottom: 1px solid #e0e7ff;
+    transition: background-color 0.3s ease;
+    cursor: default;
+}
+
+.opere-table tbody tr:hover {
+    background-color: #f0f5ff;
+}
+
+.opere-table tbody td {
+    padding: 15px 25px;
+    color: #334155; /* blu scuro-grigio */
+    vertical-align: middle;
+}
+
+/* Stile pulsanti modifica/elimina: testo #203c45, sfondo trasparente */
+.opere-table tbody td a {
+    display: inline-block;
+    padding: 6px 14px;
+    margin-right: 12px;
+    background-color: transparent;
+    color: #203c45;  /* colore testo richiesto */
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 2px solid #203c45;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    user-select: none;
+}
+
+.opere-table tbody td a:hover {
+    background-color: #203c45;
+    color: #ffffff;
+}
+
+/* Prima colonna più larga per titoli */
+.opere-table tbody td:first-child {
+    font-weight: 600;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Responsive - riduci padding su schermi piccoli */
+@media (max-width: 600px) {
+    .opere-table thead th,
+    .opere-table tbody td {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .opere-table tbody td:first-child {
+        max-width: 180px;
+    }
+}
+
+
+/* Stile generale form */
+.form-style {
+    background: rgba(255, 255, 255, 0.07);
+    padding: 30px 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: 30px auto;
+    font-family: 'Poppins', sans-serif;
+    color: #f1f1f1;
+}
+
+/* Label form */
+.form-style label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    letter-spacing: 0.03em;
+}
+
+/* Input, select, textarea allineati e coerenti */
+.form-style input[type="text"],
+.form-style input[type="email"],
+.form-style input[type="password"],
+.form-style input[type="number"],
+.form-style input[type="url"],
+.form-style select,
+.form-style textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #eee;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    resize: vertical;
+}
+
+/* Focus sugli input e textarea */
+.form-style input:focus,
+.form-style select:focus,
+.form-style textarea:focus {
+    outline: none;
+    border-color: #00ffe0;
+    background-color: rgba(0, 255, 204, 0.2);
+    box-shadow: 0 0 8px #00ffe0;
+    color: #fff;
+}
+
+/* Checkbox e radio */
+.form-style input[type="checkbox"],
+.form-style input[type="radio"] {
+    accent-color: #00ffe0;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Gruppo checkbox/radio con label */
+.form-style .option-group {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.form-style button[type="submit"] {
+    background-color: #ffffff; /* bianco */
+    color: #0f2027; /* testo scuro */
+    font-weight: 700;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 20px; /* spazio sopra il bottone */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-style button[type="submit"]:hover,
+.form-style button[type="submit"]:focus {
+    background-color: #e0e0e0; /* grigio chiaro al hover */
+    transform: scale(1.05);
+    outline: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Spaziatura tra i campi */
+.form-style .form-group {
+    margin-bottom: 25px;
+}
