@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (empty($oggetto) || empty($messaggio)) {
         $messaggio_risultato = "<p style='color: #e74c3c; font-weight: bold;'>Tutti i campi sono obbligatori.</p>";
     } else {
-        $headers = "From: sito-feedback@tuodominio.altervista.org\r\n";
+        $headers = "From: sito-feedback@gherardiluca.altervista.org\r\n";
         $headers .= "Reply-To: $email_utente\r\n";
         $headers .= "MIME-Version: 1.0\r\n";
         $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
