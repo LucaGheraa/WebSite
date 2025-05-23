@@ -13,7 +13,7 @@ if (!isset($_SESSION["inizio_sessione"])) {
 $inizio_sessione = $_SESSION["inizio_sessione"];
 
 $cookie_name = "visite";
-$cookie_time = time() + (86400 * 30); // 30 giorni
+$cookie_time = time() + (86400 * 30); 
 
 if (!isset($_COOKIE[$cookie_name])) {
     setcookie($cookie_name, 1, $cookie_time, "/");
@@ -168,7 +168,7 @@ if (!isset($_COOKIE[$cookie_name])) {
         <a href="api/index.html">🔗 API RESTful</a>
     </div>
 
-    <a class="email-button" href="invia_email.php">📧 Invia Email</a>
+    <a class="email-button" href="invia_email.php">📧 Invia Feedback</a>
     <a class="logout" href="logout.php">🚪 Logout</a>
 
     <a class="github-button" href="https://github.com/LucaGheraa/WebSite" target="_blank" rel="noopener noreferrer">
